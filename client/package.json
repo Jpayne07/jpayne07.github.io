@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "cd client && npm run build && cd .. && rm -rf docs && mv client/dist docs && touch docs/.nojekyll && git add docs && git commit -m 'Deploy' && git push",
     "lint": "eslint .",
     "preview": "vite preview"
   },
