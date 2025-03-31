@@ -6,13 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "cd client && npm run build && cd .. && rm -rf docs && mv client/dist docs && touch docs/.nojekyll && git add docs && git commit -m 'Deploy' && git push",
+    "deploy": "npm run build && cd .. && touch docs/.nojekyll && git add docs && git commit -m 'Deploy' && git push",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.0.17",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.17"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
