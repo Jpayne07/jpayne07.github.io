@@ -19,7 +19,7 @@ def create_app(test_config=None):
         template_folder='../client/build')
     # app.config.from_mapping(
     # )
-    
+    CORS(app, supports_credentials=True, origins=["https://yourusername.github.io"])
 
     if env == 'BANK_ENV':
         # load the instance config, if it exists, when not testing
@@ -38,7 +38,7 @@ def create_app(test_config=None):
         os.makedirs(app.instance_path)
     except OSError:
         pass
-    CORS(app, origins=["https://jpayne07.github.io/"])
+    
 
     api.add_resource(Callback, "/callback")
     app.register_blueprint(bank_routes.bank_app)
