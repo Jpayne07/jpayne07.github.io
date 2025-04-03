@@ -59,6 +59,9 @@ def create_app(test_config=None):
         # Otherwise, serve the React app
         print(f"404 error encountered: {e}. Serving index.html")
         return send_from_directory(app.static_folder, 'index.html')
+    @app.errorhandler(401)
+    def unauthorized(e):
+        return jsonify({"error": "Unauthorized"}), 401
 
     if __name__ == '__main__':
         port = int(os.environ.get('PORT', 5000))
