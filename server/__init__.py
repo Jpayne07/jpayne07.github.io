@@ -20,11 +20,12 @@ def create_app(test_config=None):
     # app.config.from_mapping(
     # )
     CORS(app, supports_credentials=True, origins=["https://jpayne07.github.io/"],allow_headers=["Content-Type", "Authorization", "X-Requested-With"])
+    @app.after_request
     def add_cors_headers(response):
         response.headers['Access-Control-Allow-Origin'] = 'https://jpayne07.github.io'
         response.headers['Access-Control-Allow-Credentials'] = 'true'
         response.headers['Access-Control-Allow-Headers'] = 'Content-Type,Authorization,X-Requested-With'
-        response.headers['Access-Control-Allow-Methods'] = 'GET,POST,OPTIONS,PUT,DELETE'
+        
         return response
     if env == 'BANK_ENV':
         # load the instance config, if it exists, when not testing
