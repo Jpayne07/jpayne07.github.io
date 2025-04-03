@@ -1,4 +1,5 @@
 from flask import request, jsonify, send_from_directory, Flask
+from flask_cors import CORS
 import os
 from .bank_app import bank_routes
 from datetime import timedelta
@@ -37,6 +38,8 @@ def create_app(test_config=None):
         os.makedirs(app.instance_path)
     except OSError:
         pass
+    CORS(app, origins=["https://jpayne07.github.io/"])
+
     api.add_resource(Callback, "/callback")
     app.register_blueprint(bank_routes.bank_app)
     api.init_app(app)
@@ -46,12 +49,6 @@ def create_app(test_config=None):
     bcrypt.init_app(app)
     migrate.init_app(app, db)
     session.init_app(app)
-   
-    # a simple page that says hello
-
-    
-  
-    
 
 
     @app.errorhandler(404)

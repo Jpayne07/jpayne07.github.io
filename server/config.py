@@ -4,7 +4,6 @@ from dotenv import load_dotenv
 from datetime import timedelta
 
 
-PRINT_ME = 'config loaded!'
 load_dotenv()
 DEBUG = False
 SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URI')
