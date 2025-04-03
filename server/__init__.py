@@ -20,7 +20,11 @@ def create_app(test_config=None):
     # app.config.from_mapping(
     # )
     CORS(app, supports_credentials=True, origins=["https://jpayne07.github.io/"])
-
+    @app.after_request
+    def add_cors_headers(response):
+        response.headers['Access-Control-Allow-Origin'] = 'https://jpayne07.github.io'
+        response.headers['Access-Control-Allow-Credentials'] = 'true'
+        return response
     if env == 'BANK_ENV':
         # load the instance config, if it exists, when not testing
         app.config.from_pyfile('config.py', silent=True)
@@ -50,7 +54,9 @@ def create_app(test_config=None):
     migrate.init_app(app, db)
     session.init_app(app)
 
-
+    @app.errorhandler(401)
+    def unauthorized(e):
+        return jsonify({"error": "Unauthorized"}), 401
     @app.errorhandler(404)
     def not_found(e):
         # If the request path starts with /api, return a JSON response
@@ -59,9 +65,7 @@ def create_app(test_config=None):
         # Otherwise, serve the React app
         print(f"404 error encountered: {e}. Serving index.html")
         return send_from_directory(app.static_folder, 'index.html')
-    @app.errorhandler(401)
-    def unauthorized(e):
-        return jsonify({"error": "Unauthorized"}), 401
+
 
     if __name__ == '__main__':
         port = int(os.environ.get('PORT', 5000))
