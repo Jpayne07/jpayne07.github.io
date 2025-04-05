@@ -69,3 +69,7 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.navbar {
+  @apply flex w-3/4 bg-dark;
+}
