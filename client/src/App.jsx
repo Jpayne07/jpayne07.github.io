@@ -98,19 +98,19 @@ function App() {
                             >Skills</h2>
          
           <p className='font-body text-lg text-gray md:text-left text-center pt-10'>Experienced in Python with Flask and JavaScript based programming with a background in performance digital marketing (SEO & Growth). Possess strong skills regarding attention to detail and project strategy that have helped enterprise companies create meaningful products that drive real profit.</p>
-          <div className='flex font-body text-lg text-gray md:text-left text-center flex flex-wrap align-start items-top md:justify-start justify-center pt-10 md:pl-20'>
+          <div className='flex font-body text-lg text-gray md:text-left text-center flex flex-wrap align-start items-top md:justify-start justify-center pt-10 md:pl-20 gap-10'>
 
-            <div className='p-10 pt-0 pl-0'>Flask</div>
-            <div className='p-10 pt-0 pl-0'>React</div>
-            <div className='p-10 pt-0 pl-0'>JavaScript</div>
-            <div className='p-10 pt-0 pl-0'>SQLAlchemy</div>
-            <div className='p-10 pt-0 pl-0'>ORMs</div>
-            <div className='p-10 pt-0 pl-0'>REST APIs</div>
-            <div className='p-10 pt-0 pl-0'>Agile</div>
-            <div className='p-10 pt-0 pl-0'>Git</div>
-            <div className='p-10 pt-0 pl-0'>MySQL</div>
-            <div className='p-10 pt-0 pl-0'>SQL</div>
-            <div className='p-10 pt-0 pl-0'>PowerBI</div>
+            <div>Flask</div>
+            <div>React</div>
+            <div>JavaScript</div>
+            <div>SQLAlchemy</div>
+            <div>ORMs</div>
+            <div>REST APIs</div>
+            <div>Agile</div>
+            <div>Git</div>
+            <div>MySQL</div>
+            <div>SQL</div>
+            <div>PowerBI</div>
 
           </div>
           </div>
