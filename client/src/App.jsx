@@ -24,7 +24,7 @@ function App() {
       
       {/* Main Content */}
       <main className="flex-1 overflow-auto">
-      <nav className='navbar font-body font-semibold text-xl bg-gray'>
+      <nav className='navbar font-body font-semibold text-xl bg-gray text-white'>
         <p className='px-3 md:px-5'>Main</p>
         <p className='px-3 md:px-5'>Projects</p>
         <p className='px-3 md:px-5'>Contact</p>
@@ -36,7 +36,7 @@ function App() {
                             grid-cols-1
                             grid-rows-1
                             md:grid-rows-3
-                            
+                            text-white
                             py-10 
                             px-8 
                             md:px-8 
@@ -74,13 +74,13 @@ function App() {
                           bg-gray max-w-4xl mx-auto 
                           text-center rounded-lg row-start-2">
 
-          <h2 className="font-body font-bold 
+          <h2 className="font-body font-bold text-white
           lg:text-2xl md:text-xl
           md:px-10 px-5 pt-10 ">
-            I’M JACOB, A FULLSTACK ENGINEER WITH A BACKGROUND IN PERFORMANCE MARKETING
+            I’M <span className='bg-plum'>JACOB PAYNE</span>: FULLSTACK ENGINEER - BACKGROUND IN PERFORMANCE MARKETING
           </h2>
 
-          <p className="font-body p-10 pt-5 md:px-10 px-5 text-base md:text-sm md:row-start-2 ">
+          <p className="font-body p-10 pt-5 md:px-10 px-5 text-base md:text-sm md:row-start-2 text-white">
             I pride myself in being someone who can get stuff done. It's why I am a programmer. 
             Testing, learning and innovating to provide the most value I can, no matter the context.
           </p>
@@ -144,7 +144,6 @@ function App() {
               <button
                 href="/ngram_analysis/"
                 className="flex-1 text-center md:text-sm bg-beige border-plum border-solid border-5 text-plum  py-2 px-4 rounded-lg font-body shadow">
-              
                 Source
               </button>
               </div>

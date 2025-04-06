@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @theme {
   --font-heading: Montserrat, sans-serif;
-  --font-body: Fira Code, monospace;
+  --font-body: Fira Code;
   /* --font-serif: Fira-Sans, sans-serif'; */
   --font-Montserrat: JetBrains Mono, monospace;
   --breakpoint-3xl: 120rem;
@@ -52,10 +52,8 @@ h1 {
 
 button {
   border-radius: 8px;
-  /* border: 1px solid transparent; */
   padding: 0.6em 1.2em;
   font-weight: 500;
-  /* background-color: #1a1a1a; */
   cursor: pointer;
   transition: border-color 0.25s;
 }
