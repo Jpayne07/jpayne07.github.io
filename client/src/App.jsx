@@ -172,7 +172,7 @@ function App() {
               </p>
               <div className="mt-6 flex flex-col sm:flex-row gap-4">
               <a
-                href="/Fullstack_Portfolio_Banking_app/login"
+                href="https://jpayne07.github.io/Fullstack_Portfolio_Banking_app"
                 className="flex items-center justify-center flex-1 text-sm md:text-sm bg-plum text-white py-2 px-4 rounded-lg font-body shadow"
 >
                 View Demo

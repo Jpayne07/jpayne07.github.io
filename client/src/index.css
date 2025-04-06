@@ -33,9 +33,7 @@ a {
   font-weight: 500;
   text-decoration: inherit;
 }
-a:hover {
-  color:#fef4e4;
-}
+
 
 body {
   margin: 0;
