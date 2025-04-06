@@ -80,10 +80,8 @@ function App() {
             I’M JACOB, A FULLSTACK ENGINEER WITH A BACKGROUND IN PERFORMANCE MARKETING
           </h2>
 
-          <p className="font-body p-10 pt-5 md:px-10 px-5 text-base md:text-sm md:row-start-2 ">I am a full-stack software engineer with experience building 
-            sites I am a full-stack software engineer with experience building sites 
-            I am a full-stack software engineer with experience building sites 
-            I am a full-stack software engineer with experience building sites 
+          <p className="font-body p-10 pt-5 md:px-10 px-5 text-base md:text-sm md:row-start-2 ">
+            I pride myself in being someone who can get stuff done. It's why I am a programmer. Testing, learning and innovating to provide the most value I can, no matter the context.
           </p>
           </div>
           
