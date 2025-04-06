@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import ProfileImage from './assets/ProfileImage.svg';
+import bank_app from './assets/bank_app.png';
+import ngram from './assets/ngram.png';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,8 +24,10 @@ function App() {
       
       {/* Main Content */}
       <main className="flex-1 overflow-auto">
-      <nav className='navbar font-body font-semibold text-xl'>
-        <p>Main</p>
+      <nav className='navbar font-body font-semibold text-xl bg-gray'>
+        <p className='px-3 md:px-5'>Main</p>
+        <p className='px-3 md:px-5'>Projects</p>
+        <p className='px-3 md:px-5'>Contact</p>
       </nav>
         {/* Hero Section */}
         <section className="gap-x-20 gap-y-10 
@@ -48,10 +50,14 @@ function App() {
                             text-left
                             bg-gray 
                             text-center 
-                            rounded-lg">
-            <p className='px-10 pt-5 pb-2 text-sm font-body font-semibold'>Linkedin: https://linkedin.com/jacobpayne0707</p>
+                            rounded-lg
+                            content-center">
+            <p className='px-10 pt-5 pb-2 text-sm font-body font-semibold break-words'>
+              <a href='https://linkedin.com/jacobpayne0707'>Linkedin: https://linkedin.com/jacobpayne0707</a>
+              </p>
             <p className='px-10 pb-5 pt-2 text-sm font-body font-semibold'>
-            Github: https://github.com/Jpayne07
+              <a href='https://github.com/Jpayne07'>Github: https://github.com/Jpayne07</a>
+            
             </p>
           </div>
           <div className="self-center justify-self-center md:col-start-4 row-start-1 md:row-span-4 md:col-span-3 relative mix-blend-luminosity">
@@ -86,20 +92,20 @@ function App() {
         {/* Projects Section */}
         <section id="projects" className="py-16 xl:px-24 bg-gray-100">
           <h2 className="text-2xl font-bold mb-8 text-center text-gray">Featured Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-beige p-6 rounded-lg shadow-md">
-            <h3 className="text-3xl md:text-2xl font-heading font-bold mb-2 text-gray text-left pt-10">nGram Explorer</h3>
-              <p className="text-sm md:text-xs text-gray text-left font-body mb-2">
+            <h3 className="text-3xl md:text-2xl font-heading font-bold mb-2 text-gray md:text-left text-center pt-10">nGram Explorer</h3>
+              <p className="text-sm md:text-xs text-gray md:text-left text-center font-body mb-2">
                 React // Flask
               </p>
               <hr className='border-plum border-2 mb-10'></hr>
               {/* Image */}
               <img
-                src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*jQQWdlJX_LTlOXL0" // ✅ replace with your actual image path
+                src={ngram} // ✅ replace with your actual image path
                 alt="Ngram Explorer Screenshot"
-                className="w-full h-48 object-cover rounded-md mb-4"
+                className="w-full h-48 object-cover object-[15%_45%] rounded-md mb-4"
               />
-              <p className="text-gray md:text-sm mb-4 text-left font-body">
+              <p className="text-gray md:text-sm mb-4 md:text-left text-center font-body">
                 A word analyzer tool used to understand word frequencies and weights.
               </p>
               <div className="mt-6 flex flex-col sm:flex-row gap-4">
@@ -117,19 +123,19 @@ function App() {
               </div>
             </div>
             <div className="bg-gray p-6 rounded-lg shadow-md">
-            <h3 className="text-3xl md:text-2xl font-heading font-bold mb-2 text-white text-left pt-10">nGram Explorer</h3>
-              <p className="text-sm md:text-xs text-white text-left font-body mb-2">
+            <h3 className="text-3xl md:text-2xl font-heading font-bold mb-2 text-white md:text-left text-center pt-10">Budget Helper</h3>
+              <p className="text-sm md:text-xs text-white md:text-left text-center font-body mb-2">
                 React // Flask
               </p>
               <hr className='border-plum border-2 mb-10'></hr>
               {/* Image */}
               <img
-                src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*jQQWdlJX_LTlOXL0" // ✅ replace with your actual image path
+                src={bank_app}
                 alt="Ngram Explorer Screenshot"
-                className="w-full h-48 object-cover rounded-md mb-4"
+                className="w-full h-48 object-cover object-top rounded-md mb-4"
               />
-              <p className="text-white md:text-sm mb-4 text-left font-body">
-                A word analyzer tool used to understand word frequencies and weights.
+              <p className="text-white md:text-sm mb-4 md:text-left text-center font-body">
+                A lightweight budgeting app to help users understand and vizualize their finances.
               </p>
               <div className="mt-6 flex flex-col sm:flex-row gap-4">
               <button
@@ -145,13 +151,12 @@ function App() {
               </button>
               </div>
             </div>
-            <div className="bg-beige p-6 rounded-lg shadow-md">
-            <h3 className="text-3xl md:text-2xl font-heading font-bold mb-2 text-gray text-left pt-10">nGram Explorer</h3>
-              <p className="text-sm md:text-xs text-gray text-left font-body mb-2">
+            {/* <div className="bg-beige p-6 rounded-lg shadow-md">
+            <h3 className="text-3xl md:text-2xl font-heading font-bold mb-2 text-gray md:text-left text-center pt-10">nGram Explorer</h3>
+              <p className="text-sm md:text-xs text-gray md:text-left text-center font-body mb-2">
                 React // Flask
               </p>
               <hr className='border-plum border-2 mb-10'></hr>
-              {/* Image */}
               <img
                 src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*jQQWdlJX_LTlOXL0" // ✅ replace with your actual image path
                 alt="Ngram Explorer Screenshot"
@@ -173,11 +178,7 @@ function App() {
                 Source
               </button>
               </div>
-            </div>
-
-            
-            
-
+            </div> */}
           </div>
 
         </section>
