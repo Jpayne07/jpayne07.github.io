@@ -87,13 +87,18 @@ function App() {
           </div>
           
         </section>
-        <section id="skills"className='bg-beige my-20 rounded-lg'>
+        <section id="skills"className='bg-beige my-20 rounded-lg md:p-20 p-10'>
           <div className='grid grid-cols-1 md:grid-cols-2 auto-rows-min'>
-            <h2 className='font-header text-4xl text-plum md:text-left text-center pt-20 px-20'>Overview</h2>
-            <h2 className='font-header text-4xl text-plum md:text-left text-center md:pt-20 pt-5 px-20 md:row-start-1 row-start-3'>Skills</h2>
+            <h2 className='font-header text-4xl 
+            text-plum md:text-left text-center '>Overview</h2>
+            <h2 className='font-header text-4xl 
+                            text-plum md:text-left 
+                            text-center md:row-start-1 md:col-start-2 
+                            row-start-3 pt-10 md:pt-0 md:pl-20'
+                            >Skills</h2>
          
-          <p className='font-body text-lg text-gray pt-10 md:p-20 md:pt-10 pb-10 p-20 md:text-left text-center'>Experienced in Python with Flask and JavaScript based programming with a background in performance digital marketing (SEO & Growth). Possess strong skills regarding attention to detail and project strategy that have helped enterprise companies create meaningful products that drive real profit.</p>
-          <div className='flex font-body text-lg text-gray pt-10 p-20 md:text-left text-center flex flex-wrap align-start items-top md:justify-start justify-center'>
+          <p className='font-body text-lg text-gray md:text-left text-center pt-10'>Experienced in Python with Flask and JavaScript based programming with a background in performance digital marketing (SEO & Growth). Possess strong skills regarding attention to detail and project strategy that have helped enterprise companies create meaningful products that drive real profit.</p>
+          <div className='flex font-body text-lg text-gray md:text-left text-center flex flex-wrap align-start items-top md:justify-start justify-center pt-10 md:pl-20'>
 
             <div className='p-10 pt-0 pl-0'>Flask</div>
             <div className='p-10 pt-0 pl-0'>React</div>
