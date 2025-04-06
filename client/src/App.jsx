@@ -81,12 +81,36 @@ function App() {
           </h2>
 
           <p className="font-body p-10 pt-5 md:px-10 px-5 text-base md:text-sm md:row-start-2 ">
-            I pride myself in being someone who can get stuff done. It's why I am a programmer. Testing, learning and innovating to provide the most value I can, no matter the context.
+            I pride myself in being someone who can get stuff done. It's why I am a programmer. 
+            Testing, learning and innovating to provide the most value I can, no matter the context.
           </p>
           </div>
           
         </section>
+        <section id="skills"className='bg-beige my-20 rounded-lg'>
+          <div className='grid grid-cols-1 md:grid-cols-2 auto-rows-min'>
+            <h2 className='font-header text-4xl text-plum md:text-left text-center pt-20 px-20'>Overview</h2>
+            <h2 className='font-header text-4xl text-plum md:text-left text-center md:pt-20 pt-5 px-20 md:row-start-1 row-start-3'>Skills</h2>
+         
+          <p className='font-body text-lg text-gray pt-10 md:p-20 md:pt-10 pb-10 p-20 md:text-left text-center'>Experienced in Python with Flask and JavaScript based programming with a background in performance digital marketing (SEO & Growth). Possess strong skills regarding attention to detail and project strategy that have helped enterprise companies create meaningful products that drive real profit.</p>
+          <div className='flex font-body text-lg text-gray pt-10 p-20 md:text-left text-center flex flex-wrap align-start items-top md:justify-start justify-center'>
 
+            <div className='p-10 pt-0 pl-0'>Flask</div>
+            <div className='p-10 pt-0 pl-0'>React</div>
+            <div className='p-10 pt-0 pl-0'>JavaScript</div>
+            <div className='p-10 pt-0 pl-0'>SQLAlchemy</div>
+            <div className='p-10 pt-0 pl-0'>ORMs</div>
+            <div className='p-10 pt-0 pl-0'>REST APIs</div>
+            <div className='p-10 pt-0 pl-0'>Agile</div>
+            <div className='p-10 pt-0 pl-0'>Git</div>
+            <div className='p-10 pt-0 pl-0'>MySQL</div>
+            <div className='p-10 pt-0 pl-0'>SQL</div>
+            <div className='p-10 pt-0 pl-0'>PowerBI</div>
+
+          </div>
+          </div>
+         
+        </section>
         {/* Projects Section */}
         <section id="projects" className="py-16 xl:px-24 bg-gray-100">
           <h2 className="text-2xl font-bold mb-8 text-center text-gray">Featured Projects</h2>
