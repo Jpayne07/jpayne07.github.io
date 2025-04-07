@@ -19,7 +19,7 @@ def create_app(test_config=None):
         template_folder='../client/build')
     # app.config.from_mapping(
     # )
-    CORS(app, supports_credentials=True, origins=["https://jpayne07.github.io/"], methods=["GET", "POST", "PATCH", "DELETE", "OPTIONS"], allow_headers=["Content-Type", "Authorization", "X-Requested-With"])
+    CORS(app, supports_credentials=True, origins=["https://jpayne07.github.io"], methods=["GET", "POST", "PATCH", "DELETE", "OPTIONS"], allow_headers=["Content-Type", "Authorization", "X-Requested-With"])
     
     @app.before_request
     def handle_options():
