@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting…</title>
+    <script>
+      // Get the current path after the base name
+      const base = "/Fullstack_Portfolio_Banking_app";
+      const path = location.pathname.replace(base, "");
+      const newUrl = base + "/#" + path + location.search + location.hash;
+      location.replace(newUrl);
+    </script>
+  </head>
+  <body>
+    <p>Redirecting…</p>
+  </body>
+</html>
