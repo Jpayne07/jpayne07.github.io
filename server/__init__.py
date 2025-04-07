@@ -19,7 +19,7 @@ def create_app(test_config=None):
         template_folder='../client/build')
     # app.config.from_mapping(
     # )
-    CORS(app, supports_credentials=True, origins=["https://jpayne07.github.io/"], allow_headers=["Content-Type", "Authorization", "X-Requested-With"])
+    CORS(app, supports_credentials=True, origins=["https://jpayne07.github.io/"], methods=["GET", "POST", "OPTIONS"], allow_headers=["Content-Type", "Authorization", "X-Requested-With"])
     def after_request(response):
         print(f"CORS headers: {response.headers}")
         return response
