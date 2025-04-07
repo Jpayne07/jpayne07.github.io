@@ -19,7 +19,7 @@ def create_app(test_config=None):
         template_folder='../client/build')
     # app.config.from_mapping(
     # )
-    CORS(app, supports_credentials=True, origins=["https://jpayne07.github.io/", "http://localhost:3000/"],allow_headers=["Content-Type", "Authorization", "X-Requested-With"])
+    CORS(app, supports_credentials=True, origins=["https://jpayne07.github.io/"],allow_headers=["Content-Type", "Authorization", "X-Requested-With"])
     if env == 'BANK_ENV':
         # load the instance config, if it exists, when not testing
         app.config.from_pyfile('config.py', silent=True)
