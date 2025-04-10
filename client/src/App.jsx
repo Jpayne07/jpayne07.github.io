@@ -53,7 +53,7 @@ function App() {
                             rounded-lg
                             content-center">
             <p className='px-10 pt-5 pb-2 text-sm font-body font-semibold break-words'>
-              <a href='https://linkedin.com/jacobpayne0707'>Linkedin: https://linkedin.com/jacobpayne0707</a>
+              <a href='https://linkedin.com/jacobpayne0707'>Linkedin: https://linkedin.com/in/jacobpayne0707</a>
               </p>
             <p className='px-10 pb-5 pt-2 text-sm font-body font-semibold'>
               <a href='https://github.com/Jpayne07'>Github: https://github.com/Jpayne07</a>
