@@ -6,6 +6,7 @@ from datetime import timedelta
 from .extensions import db, bcrypt, api, migrate, session
 import os
 from .bank_app.bank_application import Callback
+from .ngram import ngram
 
 
 
@@ -49,8 +50,8 @@ def create_app(test_config=None):
         pass
     
 
-    api.add_resource(Callback, "/callback")
     app.register_blueprint(bank_routes.bank_app)
+    app.register_blueprint(ngram.ngram_app)
     api.init_app(app)
     api.add_resource(Callback, "/callback")
     db.init_app(app)
@@ -76,8 +77,4 @@ def create_app(test_config=None):
         port = int(os.environ.get('PORT', 5000))
         print(f"Starting app on port {port}")
         app.run(host='0.0.0.0', port=port, debug=True)
-    print("\n✅ Final route map:")
-    for rule in app.url_map.iter_rules():
-        methods = ','.join(sorted(rule.methods - {'HEAD', 'OPTIONS'}))
-        print(f"{rule.rule:30s} → {rule.endpoint:25s} [{methods}]")
     return app
