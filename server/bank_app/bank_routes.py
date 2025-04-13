@@ -7,7 +7,7 @@ from flask import Blueprint
 from flask_restful import Api
 
 
-bank_app = Blueprint('bank_app', __name__,url_prefix="/bank/api")
+bank_app = Blueprint('bank_app', __name__,url_prefix="/api/bank")
 api = Api(bank_app)
 api.add_resource(Account, '/accounts')
 api.add_resource(SingularAccount, '/singular_account/<int:id>')
