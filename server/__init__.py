@@ -27,21 +27,8 @@ def create_app(test_config=None):
         if request.method == "OPTIONS":
             return '', 204
 
-    @app.after_request
-    def after_request(response):
-        print(f"CORS headers: {response.headers}")
-        return response
-    if env == 'BANK_ENV':
-        # load the instance config, if it exists, when not testing
-        app.config.from_pyfile('config.py', silent=True)
-    else:
-        # load the test config if passed in
-        app.config.from_mapping(
-        PERMANENT_SESSION_LIFETIME = timedelta(days=1),
-        SQLALCHEMY_DATABASE_URI = "sqlite:///db.sqlite3"
-    )
-        
-        app.config.from_mapping(test_config)
+    app.config.from_pyfile('config.py', silent=True)
+
 
     # ensure the instance folder exists
     try:
