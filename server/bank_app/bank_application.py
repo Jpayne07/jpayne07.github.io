@@ -146,6 +146,8 @@ class Account(Resource):
             return {"message": "You must sign in to see this"}, 405
         
     def post(self):
+        print("Session:", dict(session))
+        print("Request cookies:", request.cookies)
         if session['user_id']:
             data = request.get_json()
             print(data)
@@ -290,7 +292,7 @@ class Callback(Resource):
 class CheckSession(Resource):
     def get(self):
         user_id = session.get('user_id') 
-        print(session)
+        print(f"Checking session{session}")
         if user_id:
             id = session['user_id']
             user = User.query.filter_by(id=id).first().to_dict()
@@ -312,4 +314,5 @@ class ClearSession(Resource):
             httponly=True,
             samesite='None'
         )
+        print(f"Clearing session{session}")
         return response
