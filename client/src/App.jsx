@@ -9,27 +9,12 @@ function App() {
 
   return (
     <div className="flex h-screen w-full max-w-[90%] mx-auto">
-      {/* Sidebar */}
-      {/* <aside className="w-64 bg-gray-600 text-white p-6 flex flex-col justify-between">
-        <div>
-          <h2 className="text-2xl font-bold mb-6">Jacob Payne</h2>
-          <nav className="flex flex-col gap-4 text-lg">
-            <a href="#" className="hover:bg-gray-700 px-2 py-1 rounded">Home</a>
-            <a href="#projects" className="hover:bg-gray-700 px-2 py-1 rounded">Projects</a>
-            <a href="#contact" className="hover:bg-gray-700 px-2 py-1 rounded">Contact</a>
-          </nav>
-        </div>
-        <div className="text-xs text-gray-400">&copy; {new Date().getFullYear()}</div>
-      </aside> */}
-      
-      {/* Main Content */}
       <main className="flex-1 overflow-auto">
       <nav className='navbar font-body font-semibold text-xl bg-gray text-white'>
         <a href='/#skills'><p className='px-3 md:px-5'>Skills</p></a>
         <a href='/#projects'><p className='px-3 md:px-5'>Projects</p></a>
         <a href='/#contact'><p className='px-3 md:px-5'>Contact</p></a>
       </nav>
-        {/* Hero Section */}
         <section className="gap-x-20 gap-y-10 
                             grid 
                             md:grid-cols-6
@@ -120,42 +105,7 @@ function App() {
         <section id="projects" className=" xl:px-24 bg-gray-100">
           <h2 className="text-4xl font-bold mb-8 text-center text-gray py-10">Featured Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-beige p-6 rounded-lg shadow-md">
-            <h3 className="text-3xl md:text-2xl font-heading font-bold mb-2 text-gray md:text-left text-center pt-10">nGram Explorer</h3>
-              <p className="text-sm md:text-xs text-gray md:text-left text-center font-body mb-2">
-                React // Flask
-              </p>
-              <hr className='border-plum border-2 mb-10'></hr>
-              {/* Image */}
-              <img
-                src={ngram} // ✅ replace with your actual image path
-                alt="Ngram Explorer Screenshot"
-                className="w-full h-48 object-cover object-[15%_45%] rounded-md mb-4"
-              />
-              <p className="text-gray md:text-sm mb-4 md:text-left text-center font-body">
-                A word analyzer tool used to understand word frequencies and weights.
-              </p>
-              <div className="mt-6 flex flex-col sm:flex-row gap-4">
-              <a
-                href="/ngram_analysis/"
-                className="flex items-center justify-center flex-1 text-sm md:text-sm bg-plum text-white py-2 px-4 rounded-lg font-body shadow"
->
-                View Demo
-         
-              </a>
-              
-              <a 
-                href="https://github.com/Jpayne07/ngram_analysis"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 text-center md:text-sm bg-beige border-plum border-4 border-solid text-plum py-2 px-4 rounded-lg font-body shadow inline-block"
-              >
-                Source
-              </a>
-                            
-              </div>
-            </div>
-            <div className="bg-gray p-6 rounded-lg shadow-md">
+          <div className="bg-gray p-6 rounded-lg shadow-md">
             <h3 className="text-3xl md:text-2xl font-heading font-bold mb-2 text-white md:text-left text-center pt-10">Budget Helper</h3>
               <p className="text-sm md:text-xs text-white md:text-left text-center font-body mb-2">
                 React // Flask
@@ -188,40 +138,44 @@ function App() {
               </a>
               </div>
             </div>
-            {/* <div className="bg-beige p-6 rounded-lg shadow-md">
+            <div className="bg-beige p-6 rounded-lg shadow-md">
             <h3 className="text-3xl md:text-2xl font-heading font-bold mb-2 text-gray md:text-left text-center pt-10">nGram Explorer</h3>
               <p className="text-sm md:text-xs text-gray md:text-left text-center font-body mb-2">
                 React // Flask
               </p>
               <hr className='border-plum border-2 mb-10'></hr>
               <img
-                src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*jQQWdlJX_LTlOXL0" // ✅ replace with your actual image path
+                src={ngram}
                 alt="Ngram Explorer Screenshot"
-                className="w-full h-48 object-cover rounded-md mb-4"
+                className="w-full h-48 object-cover object-[15%_45%] rounded-md mb-4"
               />
-              <p className="text-gray md:text-sm mb-4 text-left font-body">
+              <p className="text-gray md:text-sm mb-4 md:text-left text-center font-body">
                 A word analyzer tool used to understand word frequencies and weights.
               </p>
               <div className="mt-6 flex flex-col sm:flex-row gap-4">
-              <button
+              <a
                 href="/ngram_analysis/"
-                className="flex-1 text-center md:text-sm bg-plum text-white py-2 px-4 rounded-lg font-body shadow">
+                className="flex items-center justify-center flex-1 text-sm md:text-sm bg-plum text-white py-2 px-4 rounded-lg font-body shadow"
+>
                 View Demo
-              </button>
-              <button
-                href="/ngram_analysis/"
-                className="flex-1 text-center md:text-sm bg-beige border-plum border-solid border-5 text-plum  py-2 px-4 rounded-lg font-body shadow">
+         
+              </a>
               
+              <a 
+                href="https://github.com/Jpayne07/ngram_analysis"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 text-center md:text-sm bg-beige border-plum border-4 border-solid text-plum py-2 px-4 rounded-lg font-body shadow inline-block"
+              >
                 Source
-              </button>
+              </a>
+                            
               </div>
-            </div> */}
+            </div>
+            
           </div>
 
         </section>
-        
-
-        {/* Contact Section */}
         <section id="contact" className="py-16 px-8 md:px-16 lg:px-24 bg-white  mt-20">
           <h2 className="text-2xl font-bold mb-4 text-center text-gray">Let's Connect</h2>
           <a href='mailto:jacobpayne007@gmail.com'><p className="text-center text-gray-600">Email: jacobpayne007@gmail.com</p></a>
