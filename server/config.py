@@ -14,7 +14,5 @@ SESSION_COOKIE_SAMESITE = 'None'
 SESSION_COOKIE_SECURE = True
 SESSION_TYPE = 'sqlalchemy'
 PERMANENT_SESSION_LIFETIME = timedelta(days=1)
-# SESSION_SQLALCHEMY = db
-# Tell Flask-Session to use your existing SQLAlchemy db instance
 
 
