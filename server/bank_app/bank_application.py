@@ -304,5 +304,11 @@ class ClearSession(Resource):
     def delete(self):
         session.clear()
         response = make_response({'message': 'Logged out, session cleared.'}, 204)
-        response.delete_cookie('session')
+        response.delete_cookie(
+        'session',
+        path='/',
+        secure=True,          # ✅ match your session cookie
+        httponly=True,
+        samesite='None'       # ✅ match original cookie exactly
+    )
         return response
