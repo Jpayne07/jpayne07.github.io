@@ -119,7 +119,6 @@ class TransactionSeed(Resource):
         cardItem = Accounts.query.filter_by(id=id).first().to_dict()['card']
 
         if account:
-            print("in account")
             account.transaction_id = transaction.id  # Update transaction reference
             db.session.commit()
 
@@ -230,6 +229,8 @@ class Login(Resource):
         if user:
             if user.authenticate(user_object['password']):
                 session['user_id'] = user.to_dict()['id']
+                print('Setting session for user_id:', user.id)
+                print('Session contents:', dict(session))
                 return user.to_dict(), 200
         return {"message": "Username or password are incorrect"}, 401
 
@@ -304,17 +305,5 @@ class ClearSession(Resource):
     def delete(self):
         session.clear()
         response = jsonify({"message": "Logged out"})
-        
-        # Explicitly overwrite the session cookie with correct flags
-        response.set_cookie(
-            'session',
-            '',
-            expires=0,
-            max_age=0,
-            path='/',
-            secure=True,
-            httponly=True,
-            samesite='None'
-        )
         print(f"Headers from clear session{response.headers}")
         return response
