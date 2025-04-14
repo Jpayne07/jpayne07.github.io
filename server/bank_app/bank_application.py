@@ -300,19 +300,21 @@ class CheckSession(Resource):
             response = make_response("Not authorized", 401)
             return response
 
-def logout():
-    session.clear()
-    response = jsonify({"message": "Logged out"})
-    response.set_cookie(
-        'session',
-        '',
-        expires=0,
-        max_age=0,
-        path='/',
-        secure=True,
-        httponly=True,
-        samesite='None'
-    )
-    print(f"Logging out and clearing headers{response.headers}")
-
-    return response
+class ClearSession(Resource):
+    def delete(self):
+        session.clear()
+        response = jsonify({"message": "Logged out"})
+        
+        # Explicitly overwrite the session cookie with correct flags
+        response.set_cookie(
+            'session',
+            '',
+            expires=0,
+            max_age=0,
+            path='/',
+            secure=True,
+            httponly=True,
+            samesite='None'
+        )
+        print(f"Headers from clear session{response.headers}")
+        return response
