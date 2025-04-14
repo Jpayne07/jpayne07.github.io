@@ -305,5 +305,11 @@ class ClearSession(Resource):
     def delete(self):
         session.clear()
         response = jsonify({"message": "Logged out"})
-        print(f"Headers from clear session{response.headers}")
+        response.delete_cookie(
+            key='session',
+            path='/',
+            secure=True,
+            httponly=True,
+            samesite='None'
+        )
         return response
