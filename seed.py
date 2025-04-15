@@ -1,4 +1,4 @@
-from app import app
+from server import create_app, db 
 from server.bank_app.bank_models import db, User, Accounts, Transactions, Bank, Cards
 from faker import Faker
 from datetime import datetime, date
@@ -6,10 +6,10 @@ from dateutil.relativedelta import relativedelta
 
 
 fake = Faker()
+app = create_app()
 
 if __name__ =='__main__':
     with app.app_context():
-        from app import db
 
         db.drop_all()
         db.create_all()
