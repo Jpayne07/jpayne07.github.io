@@ -1,6 +1,13 @@
-# jpayne07.github.io
 ## What the Project Does
-This project is a homebase for the portfolio of me, Jacob Payne
+This project is a homebase for the portfolio of me, Jacob Payne.
+
+# About Highlighted Projects
+There are 2 links associated with the projects section. The 1st is the demo, which has a fully functioning backend hosted on Render. 
+
+The second is my source code, which has a packaged and tidy app that can run locally.
+
+### Project backend
+The project backend utilizes blueprints to give my routes nested folders. One for each of my apps.
 
 ## Why the project is useful
 This project houses my frontend for my portfolio site and it also houses the apps I have created. 
