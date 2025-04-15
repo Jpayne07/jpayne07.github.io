@@ -7,7 +7,7 @@ import csv
 
 
 
-ngram_app = Blueprint('ngram', __name__,url_prefix="/api/ngram")
+ngram_app = Blueprint('ngram', __name__,url_prefix="https://api.jacobpaynecodes.com/api/ngram")
 api = Api(ngram_app)
 
 class HandleFormData(Resource):
