@@ -3,6 +3,7 @@ import './App.css'
 import ProfileImage from './assets/ProfileImage.svg';
 import bank_app from './assets/bank_app.png';
 import ngram from './assets/ngram.png';
+import RubyRails from './assets/RubyRails.png';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -82,7 +83,7 @@ function App() {
                             row-start-3 pt-10 md:pt-0 md:pl-20'
                             >Skills</h2>
          
-          <p className='font-body text-lg text-gray md:text-left text-center pt-10'>Experienced in Python with Flask and JavaScript based programming with a background in performance digital marketing (SEO & Growth). Possess strong skills regarding attention to detail and project strategy that have helped enterprise companies create meaningful products that drive real profit.</p>
+          <p className='font-body text-lg text-gray md:text-left text-center pt-10'>Experienced in Python and JavaScript. I'm a programmer with a background in performance digital marketing (SEO & Growth). Possess strong skills regarding attention to detail and project strategy that have helped enterprise companies create meaningful products that drive real profit.</p>
           <div className='flex font-body text-lg text-gray md:text-left text-center flex flex-wrap align-start items-top md:justify-start justify-center pt-10 md:pl-20 gap-10'>
 
             <div>Flask</div>
@@ -108,7 +109,7 @@ function App() {
           <div className="bg-gray p-6 rounded-lg shadow-md">
             <h3 className="text-3xl md:text-2xl font-heading font-bold mb-2 text-white md:text-left text-center pt-10">Budget Helper</h3>
               <p className="text-sm md:text-xs text-white md:text-left text-center font-body mb-2">
-                React // Flask
+                React // Flask // Python
               </p>
               <hr className='border-plum border-2 mb-10'></hr>
               {/* Image */}
@@ -141,7 +142,7 @@ function App() {
             <div className="bg-beige p-6 rounded-lg shadow-md">
             <h3 className="text-3xl md:text-2xl font-heading font-bold mb-2 text-gray md:text-left text-center pt-10">nGram Explorer</h3>
               <p className="text-sm md:text-xs text-gray md:text-left text-center font-body mb-2">
-                React // Flask
+              React // Flask // Python
               </p>
               <hr className='border-plum border-2 mb-10'></hr>
               <img
@@ -169,6 +170,40 @@ function App() {
               >
                 Source
               </a>
+                            
+              </div>
+            </div>
+            <div className="bg-beige p-6 rounded-lg shadow-md">
+            <h3 className="text-3xl md:text-2xl font-heading font-bold mb-2 text-gray md:text-left text-center pt-10">Keyword Analysis - Coming Soon</h3>
+              <p className="text-sm md:text-xs text-gray md:text-left text-center font-body mb-2">
+              Ruby on Rails
+              </p>
+              <hr className='border-plum border-2 mb-10'></hr>
+              <img
+                src={RubyRails}
+                alt="Ngram Explorer Screenshot"
+                className="w-full h-48 object-cover object-[15%_45%] rounded-md mb-4"
+              />
+              <p className="text-gray md:text-sm mb-4 md:text-left text-center font-body">
+                A lightweight keyword analyzer which categorizes and SEM data from SEMRush or other SEM tools.
+              </p>
+              <div className="mt-6 flex flex-col sm:flex-row gap-4">
+              {/* <a
+                href="/ngram_analysis/"
+                className="flex items-center justify-center flex-1 text-sm md:text-sm bg-plum text-white py-2 px-4 rounded-lg font-body shadow"
+>
+                View Demo
+         
+              </a> */}
+              
+              {/* <a 
+                href="https://github.com/Jpayne07/ngram_analysis"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 text-center md:text-sm bg-beige border-plum border-4 border-solid text-plum py-2 px-4 rounded-lg font-body shadow inline-block"
+              >
+                Source
+              </a> */}
                             
               </div>
             </div>
