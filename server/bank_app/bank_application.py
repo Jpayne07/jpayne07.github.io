@@ -275,7 +275,7 @@ class Callback(Resource):
         # Existing user: log them in by saving their info in the session
             session["user_id"] = user.to_dict()['id']
             print('already logged in')
-            return redirect('/')
+            return redirect('https://jacobpaynecodes.com/Fullstack_Portfolio_Banking_app/login')
         else:
             new_user = User(username=username)
             new_user.password_hash = "Test"
