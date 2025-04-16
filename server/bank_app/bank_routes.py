@@ -1,7 +1,7 @@
 from .bank_application import (
   Account, SingularAccount, Banks, Transactions_List, TransactionSeed,
   User_Item, CheckSession, Login, Signup, LoginWithGithub,
-  ClearSession, IndivdiualTransaction
+  ClearSession, IndivdiualTransaction, Callback
 )
 from flask import Blueprint
 from flask_restful import Api
@@ -21,3 +21,4 @@ api.add_resource(Signup, '/signup')
 api.add_resource(LoginWithGithub, '/login-github')
 api.add_resource(ClearSession, '/clear_session')
 api.add_resource(IndivdiualTransaction, '/transaction/<int:id>')
+api.add_resource(Callback, '/callback')
